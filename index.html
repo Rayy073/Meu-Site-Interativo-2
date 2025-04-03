@@ -85,14 +85,16 @@
 
         function moverBotao() {
             let botaoNao = document.getElementById("nao");
-            let larguraJanela = window.innerWidth - botaoNao.clientWidth;
-            let alturaJanela = window.innerHeight - botaoNao.clientHeight;
+            let larguraJanela = window.innerWidth - botaoNao.clientWidth - 20;
+            let alturaJanela = window.innerHeight - botaoNao.clientHeight - 20;
             let novaPosicaoX = Math.random() * larguraJanela;
             let novaPosicaoY = Math.random() * alturaJanela;
-            
+    
             botaoNao.style.position = "absolute";
             botaoNao.style.left = `${novaPosicaoX}px`;
             botaoNao.style.top = `${novaPosicaoY}px`;
+      }
+
         }
     </script>
 </body>
