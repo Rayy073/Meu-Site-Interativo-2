@@ -71,31 +71,29 @@
     <h1>Você me ama?</h1>
     <button id="sim" onclick="responderSim()">Sim</button>
     <button id="nao" onmouseover="moverBotao()">Não</button>
+    
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let aviso = document.getElementById("aviso");
-            setTimeout(() => {
-                aviso.style.display = "none";
-            }, 2000);
-        });
-
+        // Faz o aviso sumir após 2 segundos
+        setTimeout(() => {
+            document.getElementById("aviso").style.display = "none";
+        }, 2000);
+        
         function responderSim() {
             alert("Eu também te amo, meu amor! 💗");
         }
-
+        
         function moverBotao() {
             let botaoNao = document.getElementById("nao");
             let larguraJanela = window.innerWidth - botaoNao.clientWidth - 20;
             let alturaJanela = window.innerHeight - botaoNao.clientHeight - 20;
             let novaPosicaoX = Math.random() * larguraJanela;
             let novaPosicaoY = Math.random() * alturaJanela;
-    
+            
             botaoNao.style.position = "absolute";
             botaoNao.style.left = `${novaPosicaoX}px`;
             botaoNao.style.top = `${novaPosicaoY}px`;
-      }
-
         }
     </script>
 </body>
 </html>
+
